@@ -1,4 +1,4 @@
-# Storybook
+# Storybook for Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
@@ -6,22 +6,25 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Add storybook to Angular-CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+First, install the @storybook/cli package globally:
+`npm i @storybook/cli -g`
+Now, in the root of an Angular project, run the `getstorybook` command:
+This command will autodetect that it’s an Angular project and will add the necessary configurations, devDependencies and npm scripts.
 
-## Build
+## Run StoryBook
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run storybook` to run storybook.
 
-## Running unit tests
+## Build Storybook
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run build-storybook` to build storybook in a folder called storybook-static.
 
-## Running end-to-end tests
+## Add styles to storybook page
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Add a file called 'preview-head.html' in the '.storybook' folder that’s added by Storybook to the root of the project. In that file, you can add anything that would go into the head of a document. You can add your global styles in that file.
 
-## Further help
+## Official Documentation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[Storybook](https://storybook.js.org/docs/basics/introduction/)
